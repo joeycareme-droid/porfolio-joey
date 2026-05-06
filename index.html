@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio — Joey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Portfolio</div>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="projects.html">Projets</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="skills.html">Compétences</a></li>
+      <li><a href="veille.html">Veille</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Particules de fond -->
+<canvas id="particles" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.35;"></canvas>
+
+<!-- Hero -->
+<section class="hero" style="position:relative;z-index:1;">
+  <div class="hero-badge">Disponible pour alternance</div>
+  <h1 class="hero-title">Bonjour, moi c'est<br><span class="hero-name">Joey</span></h1>
+  <p class="hero-sub">Étudiant en <strong>BTS SIO option SLAM</strong><br>
+  Développeur web passionné par PHP, Python & l'automatisation</p>
+  <div class="hero-btns">
+    <a class="btn" href="projects.html">Voir mes projets</a>
+    <a class="btn-outline" href="contact.html">Me contacter</a>
+  </div>
+  <div class="hero-scroll"><span>↓</span></div>
+</section>
+
+<!-- Stats rapides -->
+<section class="stats-section" style="position:relative;z-index:1;">
+  <div class="stats-grid">
+    <div class="stat-card">
+      <span class="stat-number">6+</span>
+      <span class="stat-label">Langages maîtrisés</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">3+</span>
+      <span class="stat-label">Projets réalisés</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">5</span>
+      <span class="stat-label">Semaines de stage EDF</span>
+    </div>
+    <div class="stat-card">
+      <span class="stat-number">2</span>
+      <span class="stat-label">Ans de formation SIO</span>
+    </div>
+  </div>
+</section>
+
+<!-- Stack technique -->
+<section class="tech-section" style="position:relative;z-index:1;">
+  <h2 class="section-label">Stack technique</h2>
+  <div class="tech-grid">
+    <div class="tech-pill">HTML5</div>
+    <div class="tech-pill">CSS3</div>
+    <div class="tech-pill">PHP</div>
+    <div class="tech-pill">MySQL</div>
+    <div class="tech-pill">Python</div>
+    <div class="tech-pill">Java</div>
+    <div class="tech-pill">Git</div>
+    <div class="tech-pill">GLPI</div>
+  </div>
+</section>
+
+<style>
+.hero {
+  min-height: calc(100vh - 62px);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center;
+  padding: 80px 24px 60px;
+  background: linear-gradient(160deg, #0a0a0f 0%, #0d1520 60%, #0a0a0f 100%);
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 6px 16px;
+  background: rgba(0,234,255,0.07);
+  border: 1px solid rgba(0,234,255,0.2);
+  border-radius: 100px;
+  font-size: 0.82rem; color: #00eaff;
+  margin-bottom: 28px;
+  animation: fadeDown 0.6s ease both;
+}
+.hero-title {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 800; line-height: 1.15;
+  color: #e2e4ec; margin-bottom: 20px;
+  animation: fadeDown 0.6s ease 0.1s both;
+}
+.hero-name {
+  background: linear-gradient(90deg, #b700ff, #00eaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.hero-sub {
+  font-size: clamp(0.95rem, 2vw, 1.15rem);
+  color: #6b7080; line-height: 1.8; margin-bottom: 36px;
+  animation: fadeDown 0.6s ease 0.2s both;
+}
+.hero-sub strong { color: #c0c4d0; }
+.hero-btns {
+  display: flex; gap: 14px; flex-wrap: wrap;
+  justify-content: center;
+  animation: fadeDown 0.6s ease 0.3s both;
+}
+.hero-scroll {
+  margin-top: 60px; color: #2a2d38; font-size: 1.4rem;
+  animation: bounce 2s infinite 1s;
+}
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(8px); }
+}
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.stats-section {
+  max-width: 1100px; margin: 0 auto;
+  padding: 60px 48px;
+  border-top: 1px solid #1c1e26;
+}
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+.stat-card {
+  background: #111318;
+  border: 1px solid #1c1e26;
+  border-radius: 16px;
+  padding: 28px 20px;
+  text-align: center;
+  transition: border-color 0.25s, transform 0.25s;
+}
+.stat-card:hover { border-color: rgba(183,0,255,0.3); transform: translateY(-4px); }
+.stat-number {
+  display: block;
+  font-family: 'Syne', sans-serif;
+  font-size: 2.4rem; font-weight: 800;
+  background: linear-gradient(90deg, #b700ff, #00eaff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  line-height: 1; margin-bottom: 8px;
+}
+.stat-label {
+  font-size: 0.78rem; color: #4a4f60;
+  font-weight: 500; text-transform: uppercase; letter-spacing: 0.06em;
+}
+
+.tech-section {
+  max-width: 1100px; margin: 0 auto; padding: 0 48px 80px;
+}
+.section-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.1em;
+  color: #3a3f50; margin-bottom: 20px;
+}
+.tech-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+.tech-pill {
+  padding: 8px 18px;
+  background: #111318;
+  border: 1px solid #1c1e26;
+  border-radius: 100px;
+  font-size: 0.85rem; color: #8a8fa0;
+  font-weight: 500; cursor: default;
+  transition: all 0.2s;
+}
+.tech-pill:hover { border-color: #00eaff; color: #00eaff; background: rgba(0,234,255,0.05); }
+
+@media (max-width: 768px) {
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+  .stats-section, .tech-section { padding-left: 20px; padding-right: 20px; }
+}
+@media (max-width: 420px) {
+  .hero-btns { flex-direction: column; align-items: center; }
+}
+</style>
+
+<footer>
+  <p>© <span id="year"></span> — Portfolio Joey</p>
+</footer>
+
+<script>
+/* Burger */
+document.getElementById("year").textContent = new Date().getFullYear();
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+
+/* Particules */
+const canvas = document.getElementById('particles');
+const ctx    = canvas.getContext('2d');
+let W, H, dots = [];
+
+function resize() { W = canvas.width = window.innerWidth; H = canvas.height = window.innerHeight; }
+function randomDot() {
+  return { x: Math.random()*W, y: Math.random()*H, r: Math.random()*1.5+0.3,
+           vx: (Math.random()-0.5)*0.3, vy: (Math.random()-0.5)*0.3, a: Math.random() };
+}
+function init() { resize(); dots = Array.from({length:80}, randomDot); }
+function draw() {
+  ctx.clearRect(0,0,W,H);
+  dots.forEach(d => {
+    d.x += d.vx; d.y += d.vy;
+    if (d.x < 0) d.x = W; if (d.x > W) d.x = 0;
+    if (d.y < 0) d.y = H; if (d.y > H) d.y = 0;
+    ctx.beginPath(); ctx.arc(d.x, d.y, d.r, 0, Math.PI*2);
+    ctx.fillStyle = `rgba(0,234,255,${d.a*0.6})`; ctx.fill();
+  });
+  for (let i = 0; i < dots.length; i++) {
+    for (let j = i+1; j < dots.length; j++) {
+      const dx = dots[i].x-dots[j].x, dy = dots[i].y-dots[j].y;
+      const dist = Math.sqrt(dx*dx+dy*dy);
+      if (dist < 120) {
+        ctx.beginPath(); ctx.moveTo(dots[i].x, dots[i].y); ctx.lineTo(dots[j].x, dots[j].y);
+        ctx.strokeStyle = `rgba(183,0,255,${(1-dist/120)*0.12})`; ctx.lineWidth=0.6; ctx.stroke();
+      }
+    }
+  }
+  requestAnimationFrame(draw);
+}
+window.addEventListener('resize', resize);
+init(); draw();
+</script>
+
+</body>
+</html>

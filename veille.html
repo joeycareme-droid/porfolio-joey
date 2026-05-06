@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Veille — Joey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Portfolio</div>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="projects.html">Projets</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="skills.html">Compétences</a></li>
+      <li><a href="veille.html">Veille</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page">
+  <div class="veille-header" style="margin-bottom:40px;">
+    <h1 class="title">Veille Technologique</h1>
+    <p class="subtitle">
+      Sujet : <strong style="color:#e2e4ec;">L'Intelligence Artificielle Générative</strong><br>
+      Sélection d'articles récents sur l'IA générative — ChatGPT, Claude et leurs impacts.
+    </p>
+    <p style="font-size:.78rem;color:#6b7080;margin-top:8px;">Dernière mise à jour : 23/04/2026</p>
+  </div>
+
+  <section class="veille-grid">
+
+    <!-- Article 1 -->
+    <a class="v-card" href="https://www.blogdumoderateur.com/ia-generative-ludovic-salenne-repond-questions-lecteurs-bdm/" target="_blank" rel="noopener" style="animation-delay:0s">
+      <div class="v-img">
+        <img src="https://f.hellowork.com/blogdumoderateur/2026/04/boite-questions-ia-ludovic-salenne.jpg" alt="" loading="lazy" onerror="this.closest('.v-img').style.display='none'">
+      </div>
+      <div class="v-body">
+        <div class="v-meta">
+          <span class="v-source">Blogdumoderateur.com</span>
+          <span class="v-date">23/04/2026</span>
+        </div>
+        <h2 class="v-title">IA générative : Ludovic Salenne répond aux questions des lecteurs de BDM</h2>
+        <p class="v-desc">Ludovic Salenne, expert en intelligence artificielle, a répondu aux questions posées par nos lecteurs.</p>
+        <span class="v-link">Lire l'article →</span>
+      </div>
+    </a>
+
+    <!-- Article 2 -->
+    <a class="v-card" href="https://www.generation-nt.com/actualites/ubisoft-chatgpt-jeux-aaa-2074396" target="_blank" rel="noopener" style="animation-delay:0.07s">
+      <div class="v-img">
+        <img src="https://img.generation-nt.com/ubisoft_04B002A301700608.webp" alt="" loading="lazy" onerror="this.closest('.v-img').style.display='none'">
+      </div>
+      <div class="v-body">
+        <div class="v-meta">
+          <span class="v-source">Génération NT</span>
+          <span class="v-date">22/04/2026</span>
+        </div>
+        <h2 class="v-title">Ubisoft impose désormais la maîtrise des IA pour développer ses futurs jeux AAA</h2>
+        <p class="v-desc">Ubisoft exige désormais une expérience concrète avec des modèles d'IA générative comme ChatGPT ou MidJourney pour des postes de développement clés.</p>
+        <span class="v-link">Lire l'article →</span>
+      </div>
+    </a>
+
+    <!-- Article 3 -->
+    <a class="v-card" href="https://fredcavazza.net/2026/04/15/seule-une-meilleure-pedagogie-peut-faciliter-ladoption-de-lia/" target="_blank" rel="noopener" style="animation-delay:0.14s">
+      <div class="v-img">
+        <img src="https://fredcavazza.net/wp-content/uploads/2026/04/Pedagogie-IA-1.jpg" alt="" loading="lazy" onerror="this.closest('.v-img').style.display='none'">
+      </div>
+      <div class="v-body">
+        <div class="v-meta">
+          <span class="v-source">Fredcavazza.net</span>
+          <span class="v-date">15/04/2026</span>
+        </div>
+        <h2 class="v-title">Seule une meilleure pédagogie peut faciliter l'adoption de l'IA</h2>
+        <p class="v-desc">Plus de 3 ans après la sortie de ChatGPT, 80 % des salariés refusent l'adoption imposée par leur direction. Une question de pédagogie avant tout.</p>
+        <span class="v-link">Lire l'article →</span>
+      </div>
+    </a>
+
+    <!-- Article 4 -->
+    <a class="v-card" href="https://www.lesnumeriques.com/telephone-portable/ios-27-tout-savoir-sur-le-nouveau-siri-booste-a-l-ia-nouveaute-principale-a-venir-sur-l-iphone-n254193.html" target="_blank" rel="noopener" style="animation-delay:0.21s">
+      <div class="v-img">
+        <img src="https://cdn.lesnumeriques.com/optim/news/25/254193/f6e56164-ios-27-tout-savoir-sur-le-nouveau-siri-booste-a-l-ia-nouveaute-principale-a-venir-sur-l-iphone_png__1200_678__0-92-1920-1100.jpg" alt="" loading="lazy" onerror="this.closest('.v-img').style.display='none'">
+      </div>
+      <div class="v-body">
+        <div class="v-meta">
+          <span class="v-source">Les Numériques</span>
+          <span class="v-date">12/04/2026</span>
+        </div>
+        <h2 class="v-title">iOS 27 : tout savoir sur le nouveau Siri boosté à l'IA, nouveauté principale à venir sur l'iPhone</h2>
+        <p class="v-desc">Avec iOS 27, Siri ferait sa révolution grâce à l'arrivée de l'intelligence artificielle. Les fuites d'informations semblent bien savoir ce qu'Apple nous concocterait !</p>
+        <span class="v-link">Lire l'article →</span>
+      </div>
+    </a>
+
+    <!-- Article 5 -->
+    <a class="v-card" href="https://theconversation.com/openai-en-bourse-les-marches-peuvent-ils-gouverner-chatgpt-et-lia-279431" target="_blank" rel="noopener" style="animation-delay:0.28s">
+      <div class="v-img">
+        <img src="https://images.theconversation.com/files/726663/original/file-20260327-57-27rt2h.jpg?ixlib=rb-4.1.0&rect=0%2C111%2C5202%2C2601&q=45&auto=format&w=1356&h=668&fit=crop" alt="" loading="lazy" onerror="this.closest('.v-img').style.display='none'">
+      </div>
+      <div class="v-body">
+        <div class="v-meta">
+          <span class="v-source">The Conversation</span>
+          <span class="v-date">07/04/2026</span>
+        </div>
+        <h2 class="v-title">OpenAI en Bourse : les marchés peuvent-ils gouverner ChatGPT et l'IA ?</h2>
+        <p class="v-desc">L'arrivée en Bourse d'OpenAI pose une question éthique fondamentale : les marchés financiers peuvent-ils vraiment contrôler l'intelligence artificielle ?</p>
+        <span class="v-link">Lire l'article →</span>
+      </div>
+    </a>
+
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> — Portfolio Joey</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
+</body>
+</html>

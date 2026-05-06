@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CV — Joey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Portfolio</div>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="projects.html">Projets</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="skills.html">Compétences</a></li>
+      <li><a href="veille.html">Veille</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="cv-page">
+
+  <!-- En-tête -->
+  <section class="cv-hero">
+    <div class="cv-hero-left">
+      <div class="cv-avatar">J</div>
+      <div>
+        <h1 class="cv-name">Joey</h1>
+        <p class="cv-role">Étudiant BTS SIO — option SLAM</p>
+        <div class="cv-tags">
+          <span>📍 Guyane</span>
+          <span>🎓 BTS SIO SLAM</span>
+          <span>💼 Stage EDF SEI</span>
+          <span>💼 Stage Apynow Consulting</span>
+        </div>
+      </div>
+    </div>
+    <div class="cv-hero-btns">
+      <a class="btn" href="assets/cv/mon_cv.pdf" target="_blank">👁 Voir le CV</a>
+      <a class="btn-outline" href="assets/cv/mon_cv.pdf" download>⬇ Télécharger</a>
+    </div>
+  </section>
+
+  <!-- Timeline -->
+  <section class="cv-section">
+    <h2 class="cv-section-title">Parcours</h2>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <span class="tl-date">En cours — 2024/2026</span>
+          <h3>BTS SIO option SLAM</h3>
+          <p>Formation en développement logiciel et applications web. Projets en PHP, Python, Java et SQL.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <span class="tl-date">Janvier – février 2026</span>
+          <h3>Stage — Apynow Consulting</h3>
+          <p>Utilisation de Hostinger, création d'un site vitrine.</p>
+          <span class="tl-tag">5 semaines</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <span class="tl-date">Juin – Juillet 2025</span>
+          <h3>Stage — EDF SEI</h3>
+          <p>Utilisation de GLPI, découverte des infrastructures IT, préparation d'un outil d'automatisation interne.</p>
+          <span class="tl-tag">5 semaines</span>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-dot"></div>
+        <div class="tl-content">
+          <span class="tl-date">2024</span>
+          <h3>Bac STI2D — spécialité SIN</h3>
+          <p>Première formation technique en informatique, réseaux et systèmes embarqués.</p>
+          <span class="tl-tag">Obtenu</span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Compétences -->
+  <section class="cv-section">
+    <h2 class="cv-section-title">Compétences clés</h2>
+    <div class="cv-skills-grid">
+      <div class="cv-skill-chip"><span class="chip-icon">🌐</span><div><strong>Web</strong><p>HTML5, CSS3, PHP, MySQL</p></div></div>
+      <div class="cv-skill-chip"><span class="chip-icon">🐍</span><div><strong>Scripts</strong><p>Python, automatisation</p></div></div>
+      <div class="cv-skill-chip"><span class="chip-icon">☕</span><div><strong>Prog. objet</strong><p>Java orienté objet</p></div></div>
+      <div class="cv-skill-chip"><span class="chip-icon">🗄️</span><div><strong>Base de données</strong><p>Conception SQL, requêtes</p></div></div>
+      <div class="cv-skill-chip"><span class="chip-icon">🔧</span><div><strong>Outils</strong><p>Git, GitHub, GLPI</p></div></div>
+      <div class="cv-skill-chip"><span class="chip-icon">🗣️</span><div><strong>Langues</strong><p>Portugais B1 · Anglais B1</p></div></div>
+    </div>
+  </section>
+
+  <!-- Téléchargement -->
+  <section class="cv-download-box">
+    <div class="cv-download-text">
+      <h3>CV complet disponible</h3>
+      <p>Télécharge la version PDF pour tous les détails.</p>
+    </div>
+    <div class="cv-hero-btns">
+      <a class="btn" href="assets/cv/mon_cv.pdf" target="_blank">👁 Voir le CV</a>
+      <a class="btn-outline" href="assets/cv/mon_cv.pdf" download>⬇ Télécharger</a>
+    </div>
+  </section>
+
+</div>
+
+<style>
+.cv-page { max-width: 900px; margin: 0 auto; padding: 52px 48px 80px; }
+
+.cv-hero {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 24px;
+  background: #111318; border: 1px solid #1c1e26;
+  border-radius: 20px; padding: 32px 36px; margin-bottom: 48px;
+  position: relative; overflow: hidden;
+}
+.cv-hero::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, #b700ff, #00eaff);
+}
+.cv-hero-left { display: flex; align-items: center; gap: 20px; }
+.cv-avatar {
+  width: 64px; height: 64px; border-radius: 50%;
+  background: linear-gradient(135deg, #b700ff, #00eaff);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 1.6rem; font-weight: 800; color: #0a0a0f; flex-shrink: 0;
+}
+.cv-name { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: #e2e4ec; margin-bottom: 4px; }
+.cv-role { font-size: 0.9rem; color: #6b7080; margin-bottom: 10px; }
+.cv-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.cv-tags span {
+  font-size: 0.75rem; padding: 3px 10px;
+  background: rgba(0,234,255,0.06); border: 1px solid rgba(0,234,255,0.14);
+  border-radius: 100px; color: #6b7080;
+}
+.cv-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+.cv-section { margin-bottom: 48px; }
+.cv-section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.1em; color: #3a3f50;
+  margin-bottom: 24px; padding-bottom: 10px;
+  border-bottom: 1px solid #1c1e26;
+}
+
+.timeline { display: flex; flex-direction: column; position: relative; padding-left: 28px; }
+.timeline::before {
+  content: ''; position: absolute; left: 6px; top: 10px; bottom: 10px; width: 1px;
+  background: linear-gradient(to bottom, #b700ff, #00eaff, transparent);
+}
+.tl-item { position: relative; padding-bottom: 32px; }
+.tl-item:last-child { padding-bottom: 0; }
+.tl-dot {
+  position: absolute; left: -25px; top: 6px;
+  width: 12px; height: 12px; border-radius: 50%;
+  background: linear-gradient(135deg, #b700ff, #00eaff);
+  box-shadow: 0 0 10px rgba(183,0,255,0.4);
+}
+.tl-content {
+  background: #111318; border: 1px solid #1c1e26;
+  border-radius: 14px; padding: 20px 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.tl-content:hover { border-color: rgba(0,234,255,0.2); transform: translateX(4px); }
+.tl-date {
+  font-size: 0.75rem; font-weight: 600; color: #00eaff;
+  text-transform: uppercase; letter-spacing: 0.06em;
+  display: block; margin-bottom: 6px;
+}
+.tl-content h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: #e2e4ec; margin-bottom: 6px; }
+.tl-content p { font-size: 0.875rem; color: #6b7080; line-height: 1.6; }
+.tl-tag {
+  display: inline-block; margin-top: 10px; padding: 3px 10px;
+  background: rgba(183,0,255,0.09); border: 1px solid rgba(183,0,255,0.2);
+  border-radius: 100px; font-size: 0.75rem; color: #b700ff;
+}
+
+.cv-skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.cv-skill-chip {
+  display: flex; align-items: center; gap: 14px;
+  background: #111318; border: 1px solid #1c1e26;
+  border-radius: 14px; padding: 16px 18px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.cv-skill-chip:hover { border-color: rgba(183,0,255,0.25); transform: translateY(-3px); }
+.chip-icon { font-size: 1.5rem; flex-shrink: 0; }
+.cv-skill-chip strong { display: block; font-size: 0.88rem; color: #ddd; margin-bottom: 2px; }
+.cv-skill-chip p { font-size: 0.78rem; color: #555; margin: 0; }
+
+.cv-download-box {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 20px;
+  background: linear-gradient(135deg, rgba(183,0,255,0.05), rgba(0,234,255,0.05));
+  border: 1px solid rgba(0,234,255,0.13); border-radius: 20px; padding: 28px 32px;
+}
+.cv-download-text h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; color: #e2e4ec; margin-bottom: 4px; }
+.cv-download-text p { font-size: 0.85rem; color: #6b7080; }
+
+@media (max-width: 768px) {
+  .cv-page { padding: 40px 20px 60px; }
+  .cv-hero { flex-direction: column; align-items: flex-start; }
+  .cv-skills-grid { grid-template-columns: repeat(2, 1fr); }
+  .cv-download-box { flex-direction: column; align-items: flex-start; }
+}
+@media (max-width: 480px) {
+  .cv-skills-grid { grid-template-columns: 1fr; }
+  .cv-hero-left { flex-direction: column; align-items: flex-start; }
+}
+</style>
+
+<footer>
+  <p>© <span id="year"></span> — Portfolio Joey</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
+</body>
+</html>

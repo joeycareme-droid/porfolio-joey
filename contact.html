@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact — Joey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Portfolio</div>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="projects.html">Projets</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="skills.html">Compétences</a></li>
+      <li><a href="veille.html">Veille</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="page">
+  <section class="section">
+    <h1 class="title">Me Contacter</h1>
+    <p class="subtitle">Une question, un projet ou une opportunité ? Envoyez-moi un message.</p>
+  </section>
+
+  <section class="contact-box">
+    <!--
+      netlify-honeypot et data-netlify="true" sont obligatoires pour
+      que Netlify détecte et gère le formulaire automatiquement.
+      Les messages arriveront dans ton dashboard Netlify + par email.
+    -->
+    <form
+      name="contact" netlify
+      method="POST"
+      data-netlify="true"
+      netlify-honeypot="bot-field"
+      class="contact-form"
+      id="contactForm"
+    >
+      <!-- Champ caché anti-spam Netlify -->
+      <input type="hidden" name="form-name" value="contact">
+      <p style="display:none;">
+        <label>Ne pas remplir : <input name="bot-field"></label>
+      </p>
+
+      <div>
+        <label for="nom">Nom</label>
+        <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+      </div>
+
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required placeholder="votre@email.com">
+      </div>
+
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" required placeholder="Votre message…"></textarea>
+      </div>
+
+      <button type="submit">Envoyer</button>
+    </form>
+
+    <div class="success-msg" id="successMsg">
+      ✅ Message envoyé avec succès ! Je vous répondrai dès que possible.
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© <span id="year"></span> — Portfolio Joey</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+
+/* Gestion envoi formulaire en AJAX pour afficher le message de succès */
+const form = document.getElementById('contactForm');
+form.addEventListener('submit', async function(e) {
+  e.preventDefault();
+
+  const data = new FormData(form);
+
+  try {
+    const response = await fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(data).toString()
+    });
+
+    if (response.ok) {
+      form.style.display = 'none';
+      document.getElementById('successMsg').style.display = 'block';
+    } else {
+      alert('Une erreur est survenue. Réessayez.');
+    }
+  } catch (err) {
+    alert('Erreur réseau. Réessayez.');
+  }
+});
+</script>
+</body>
+</html>

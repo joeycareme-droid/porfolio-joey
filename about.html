@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>À propos — Joey</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <nav class="navbar">
+    <div class="logo">Portfolio</div>
+    <button class="burger" onclick="toggleMenu()" aria-label="Menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="about.html">À propos</a></li>
+      <li><a href="projects.html">Projets</a></li>
+      <li><a href="cv.html">CV</a></li>
+      <li><a href="skills.html">Compétences</a></li>
+      <li><a href="veille.html">Veille</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- ══ Hero about ══ -->
+<section class="ab-hero">
+  <div class="ab-hero-inner">
+    <div class="ab-avatar">J</div>
+    <div>
+      <p class="ab-eyebrow">Étudiant BTS SIO SLAM</p>
+      <h1 class="ab-name">Joey Careme</h1>
+      <p class="ab-desc">Passionné par le développement web, l'automatisation et la création d'applications complètes.</p>
+      <div class="ab-chips">
+        <span>📍 Guyane</span>
+        <span>🎓 BTS SIO SLAM</span>
+        <span>💻 Dev Web</span>
+        <span>🐍 Python</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="ab-page">
+
+  <!-- ══ Qui suis-je ══ -->
+  <section class="ab-section">
+    <div class="ab-section-label">Qui suis-je ?</div>
+    <div class="ab-card ab-intro">
+      <div class="ab-intro-text">
+        <p>
+          Je m'appelle <strong>Joey</strong> et je suis étudiant en <strong>BTS SIO option SLAM</strong>.
+          Passionné par le développement web, les applications et l'automatisation,
+          je développe régulièrement des projets en <strong>HTML, CSS, PHP, SQL, Python et Java</strong>.
+        </p>
+        <p>
+          J'ai obtenu un <strong>Bac STI2D spécialité SIN</strong>, ce qui m'a donné une
+          première base solide en informatique, réseaux et systèmes embarqués.
+          Aujourd'hui, je me spécialise dans le développement logiciel et la création
+          d'applications complètes.
+        </p>
+      </div>
+      <div class="ab-facts">
+        <div class="ab-fact">
+          <span class="ab-fact-num">6+</span>
+          <span class="ab-fact-lbl">Langages</span>
+        </div>
+        <div class="ab-fact">
+          <span class="ab-fact-num">3+</span>
+          <span class="ab-fact-lbl">Projets</span>
+        </div>
+        <div class="ab-fact">
+          <span class="ab-fact-num">2</span>
+          <span class="ab-fact-lbl">Stages</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══ Parcours ══ -->
+  <section class="ab-section">
+    <div class="ab-section-label">Parcours</div>
+    <div class="ab-timeline">
+
+      <div class="ab-tl-item">
+        <div class="ab-tl-icon">🎓</div>
+        <div class="ab-tl-body">
+          <div class="ab-tl-top">
+            <h3>BTS SIO option SLAM</h3>
+            <span class="ab-tl-badge ab-badge-active">En cours</span>
+          </div>
+          <p class="ab-tl-date">2024 — 2026 · Melkior Garré, Cayenne</p>
+          <p class="ab-tl-desc">Formation en développement logiciel, applications web et bases de données.</p>
+        </div>
+      </div>
+
+      <div class="ab-tl-item">
+        <div class="ab-tl-icon">💼</div>
+        <div class="ab-tl-body">
+          <div class="ab-tl-top">
+            <h3>Stage — Apynow Consulting</h3>
+            <span class="ab-tl-badge">5 semaines</span>
+          </div>
+          <p class="ab-tl-date">Janvier – Février 2026</p>
+          <p class="ab-tl-desc">Utilisation d'Hostinger, création d'un site vitrine complet pour un client.</p>
+          <div class="ab-tl-tags"><span>Hostinger</span><span>Site vitrine</span></div>
+        </div>
+      </div>
+
+      <div class="ab-tl-item">
+        <div class="ab-tl-icon">💼</div>
+        <div class="ab-tl-body">
+          <div class="ab-tl-top">
+            <h3>Stage — EDF SEI</h3>
+            <span class="ab-tl-badge">5 semaines</span>
+          </div>
+          <p class="ab-tl-date">Juin – Juillet 2025</p>
+          <p class="ab-tl-desc">Découverte des infrastructures IT, utilisation de GLPI et préparation d'un outil d'automatisation interne.</p>
+          <div class="ab-tl-tags"><span>GLPI</span><span>IT</span><span>Automatisation</span></div>
+        </div>
+      </div>
+
+      <div class="ab-tl-item">
+        <div class="ab-tl-icon">🏫</div>
+        <div class="ab-tl-body">
+          <div class="ab-tl-top">
+            <h3>Bac STI2D — spécialité SIN</h3>
+            <span class="ab-tl-badge ab-badge-done">Obtenu</span>
+          </div>
+          <p class="ab-tl-date">2024 · Léon Gontrant DAMAS, Rémire-Montjoly</p>
+          <p class="ab-tl-desc">Formation technique en informatique, réseaux et systèmes embarqués.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══ Compétences + Langues ══ -->
+  <section class="ab-section ab-two-col">
+
+    <div>
+      <div class="ab-section-label">Compétences</div>
+      <div class="ab-skills-list">
+        <div class="ab-skill-row">
+          <span class="ab-skill-icon">🌐</span>
+          <div>
+            <strong>Développement web</strong>
+            <p>HTML5, CSS3, PHP, MySQL</p>
+          </div>
+        </div>
+        <div class="ab-skill-row">
+          <span class="ab-skill-icon">🐍</span>
+          <div>
+            <strong>Scripts & automatisation</strong>
+            <p>Python</p>
+          </div>
+        </div>
+        <div class="ab-skill-row">
+          <span class="ab-skill-icon">☕</span>
+          <div>
+            <strong>Programmation objet</strong>
+            <p>Java</p>
+          </div>
+        </div>
+        <div class="ab-skill-row">
+          <span class="ab-skill-icon">🗄️</span>
+          <div>
+            <strong>Bases de données</strong>
+            <p>Conception & requêtes SQL</p>
+          </div>
+        </div>
+        <div class="ab-skill-row">
+          <span class="ab-skill-icon">🔧</span>
+          <div>
+            <strong>Outils</strong>
+            <p>Git, GitHub, GLPI</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <div class="ab-section-label">Langues & Loisirs</div>
+      <div class="ab-card" style="padding:24px;margin-bottom:16px;">
+        <div class="ab-lang-row">
+          <span>🇧🇷 Portugais</span>
+          <span class="ab-lang-level">B1</span>
+        </div>
+        <div class="ab-lang-bar"><div style="width:55%"></div></div>
+        <div class="ab-lang-row" style="margin-top:18px;">
+          <span>🇬🇧 Anglais</span>
+          <span class="ab-lang-level">B1</span>
+        </div>
+        <div class="ab-lang-bar"><div style="width:55%"></div></div>
+      </div>
+      <div class="ab-card" style="padding:24px;">
+        <p class="ab-section-label" style="margin-bottom:14px;">Loisirs</p>
+        <div class="ab-hobbies">
+          <span>🏋️ Sport</span>
+          <span>💻 Informatique</span>
+          <span>🎵 Musique</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- ══ CTA ══ -->
+  <section class="ab-cta">
+    <div>
+      <h3>Envie d'en savoir plus ?</h3>
+      <p>Consulte mon CV complet ou envoie-moi un message.</p>
+    </div>
+    <div class="ab-cta-btns">
+      <a class="btn" href="cv.html">Voir mon CV</a>
+      <a class="btn-outline" href="contact.html">Me contacter</a>
+    </div>
+  </section>
+
+</div>
+
+<style>
+/* ── Hero ── */
+.ab-hero {
+  background: linear-gradient(160deg, #0a0a0f 0%, #0d1520 60%, #0a0a0f 100%);
+  border-bottom: 1px solid #1c1e26;
+  padding: 64px 48px 52px;
+}
+.ab-hero-inner {
+  max-width: 860px; margin: 0 auto;
+  display: flex; align-items: center; gap: 36px; flex-wrap: wrap;
+}
+.ab-avatar {
+  width: 88px; height: 88px; border-radius: 50%; flex-shrink: 0;
+  background: linear-gradient(135deg, #b700ff, #00eaff);
+  display: flex; align-items: center; justify-content: center;
+  font-family: 'Syne', sans-serif;
+  font-size: 2.2rem; font-weight: 800; color: #0a0a0f;
+  box-shadow: 0 0 40px rgba(183,0,255,0.25);
+}
+.ab-eyebrow {
+  font-size: 0.78rem; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.1em; color: #00eaff; margin-bottom: 6px;
+}
+.ab-name {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 2.8rem); font-weight: 800;
+  color: #e2e4ec; margin-bottom: 10px; line-height: 1.1;
+}
+.ab-desc { color: #6b7080; font-size: 1rem; margin-bottom: 18px; max-width: 480px; }
+.ab-chips { display: flex; flex-wrap: wrap; gap: 8px; }
+.ab-chips span {
+  font-size: 0.78rem; padding: 4px 12px;
+  background: rgba(0,234,255,0.06); border: 1px solid rgba(0,234,255,0.15);
+  border-radius: 100px; color: #8a8fa0;
+}
+
+/* ── Page ── */
+.ab-page { max-width: 900px; margin: 0 auto; padding: 52px 48px 80px; }
+
+/* ── Section label ── */
+.ab-section-label {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.72rem; font-weight: 700;
+  text-transform: uppercase; letter-spacing: 0.12em; color: #3a3f50;
+  margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #1c1e26;
+}
+
+.ab-section { margin-bottom: 52px; }
+
+/* ── Card ── */
+.ab-card {
+  background: #111318; border: 1px solid #1c1e26; border-radius: 16px;
+}
+
+/* ── Intro ── */
+.ab-intro {
+  display: flex; align-items: flex-start; gap: 32px;
+  padding: 28px 32px; flex-wrap: wrap;
+}
+.ab-intro-text { flex: 1; min-width: 240px; }
+.ab-intro-text p { color: #9095a8; line-height: 1.8; margin-bottom: 12px; }
+.ab-intro-text p:last-child { margin-bottom: 0; }
+.ab-intro-text strong { color: #e2e4ec; }
+
+.ab-facts {
+  display: flex; flex-direction: column; gap: 16px;
+  min-width: 110px; flex-shrink: 0;
+  border-left: 1px solid #1c1e26; padding-left: 28px;
+}
+.ab-fact { text-align: center; }
+.ab-fact-num {
+  display: block; font-family: 'Syne', sans-serif; font-size: 2rem; font-weight: 800;
+  background: linear-gradient(90deg, #b700ff, #00eaff);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+  line-height: 1;
+}
+.ab-fact-lbl { font-size: 0.72rem; color: #4a4f60; text-transform: uppercase; letter-spacing: 0.08em; }
+
+/* ── Timeline ── */
+.ab-timeline { display: flex; flex-direction: column; gap: 16px; }
+.ab-tl-item {
+  display: flex; gap: 18px; align-items: flex-start;
+  background: #111318; border: 1px solid #1c1e26; border-radius: 16px;
+  padding: 22px 24px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.ab-tl-item:hover { border-color: rgba(0,234,255,0.2); transform: translateX(4px); }
+.ab-tl-icon {
+  font-size: 1.4rem; width: 44px; height: 44px; flex-shrink: 0;
+  background: rgba(183,0,255,0.08); border: 1px solid rgba(183,0,255,0.15);
+  border-radius: 12px; display: flex; align-items: center; justify-content: center;
+}
+.ab-tl-body { flex: 1; }
+.ab-tl-top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 4px; }
+.ab-tl-top h3 { font-family: 'Syne', sans-serif; font-size: 0.98rem; font-weight: 700; color: #e2e4ec; }
+.ab-tl-badge {
+  font-size: 0.7rem; padding: 2px 10px;
+  background: rgba(0,234,255,0.07); border: 1px solid rgba(0,234,255,0.18);
+  border-radius: 100px; color: #00eaff; font-weight: 600;
+}
+.ab-badge-active { background: rgba(183,0,255,0.09); border-color: rgba(183,0,255,0.25); color: #b700ff; }
+.ab-badge-done   { background: rgba(0,200,100,0.08); border-color: rgba(0,200,100,0.2); color: #00c864; }
+.ab-tl-date { font-size: 0.78rem; color: #4a4f60; margin-bottom: 6px; }
+.ab-tl-desc { font-size: 0.875rem; color: #7a8090; line-height: 1.6; }
+.ab-tl-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 10px; }
+.ab-tl-tags span {
+  font-size: 0.72rem; padding: 2px 9px;
+  background: rgba(0,234,255,0.05); border: 1px solid rgba(0,234,255,0.12);
+  border-radius: 100px; color: #5a6070;
+}
+
+/* ── Two col ── */
+.ab-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; }
+
+/* ── Skills list ── */
+.ab-skills-list { display: flex; flex-direction: column; gap: 12px; }
+.ab-skill-row {
+  display: flex; align-items: center; gap: 14px;
+  background: #111318; border: 1px solid #1c1e26; border-radius: 14px;
+  padding: 14px 18px;
+  transition: border-color 0.2s, transform 0.2s;
+}
+.ab-skill-row:hover { border-color: rgba(183,0,255,0.2); transform: translateX(3px); }
+.ab-skill-icon { font-size: 1.3rem; flex-shrink: 0; }
+.ab-skill-row strong { display: block; font-size: 0.875rem; color: #ddd; margin-bottom: 2px; }
+.ab-skill-row p { font-size: 0.78rem; color: #555; margin: 0; }
+
+/* ── Langues ── */
+.ab-lang-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; font-size: 0.9rem; color: #b0b4c0; }
+.ab-lang-level {
+  font-family: 'Syne', sans-serif; font-size: 0.78rem; font-weight: 700;
+  padding: 2px 10px; background: rgba(0,234,255,0.07);
+  border: 1px solid rgba(0,234,255,0.18); border-radius: 100px; color: #00eaff;
+}
+.ab-lang-bar {
+  width: 100%; height: 6px; background: #1c1e26; border-radius: 100px; overflow: hidden;
+}
+.ab-lang-bar div {
+  height: 100%; border-radius: 100px;
+  background: linear-gradient(90deg, #b700ff, #00eaff);
+}
+
+/* ── Hobbies ── */
+.ab-hobbies { display: flex; flex-wrap: wrap; gap: 10px; }
+.ab-hobbies span {
+  padding: 8px 16px; font-size: 0.85rem;
+  background: #0a0a0f; border: 1px solid #1c1e26;
+  border-radius: 100px; color: #8a8fa0;
+}
+
+/* ── CTA ── */
+.ab-cta {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 20px;
+  background: linear-gradient(135deg, rgba(183,0,255,0.05), rgba(0,234,255,0.05));
+  border: 1px solid rgba(0,234,255,0.13); border-radius: 20px; padding: 28px 32px;
+}
+.ab-cta h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; color: #e2e4ec; margin-bottom: 4px; }
+.ab-cta p  { font-size: 0.85rem; color: #6b7080; }
+.ab-cta-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+/* ── Responsive ── */
+@media (max-width: 768px) {
+  .ab-hero { padding: 40px 20px 36px; }
+  .ab-page { padding: 36px 20px 60px; }
+  .ab-two-col { grid-template-columns: 1fr; }
+  .ab-facts { flex-direction: row; border-left: none; padding-left: 0; border-top: 1px solid #1c1e26; padding-top: 20px; }
+  .ab-intro { flex-direction: column; }
+  .ab-cta { flex-direction: column; align-items: flex-start; }
+}
+</style>
+
+<footer>
+  <p>© <span id="year"></span> — Portfolio Joey</p>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
+</body>
+</html>
