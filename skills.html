@@ -31,48 +31,79 @@
   </section>
 
   <section class="skills-box">
-
     <div class="skill">
       <h3>HTML / CSS</h3>
-      <div class="skill-bar">
-        <div class="skill-level" data-width="85"></div>
-      </div>
+      <div class="skill-bar"><div class="skill-level" data-width="85"></div></div>
     </div>
-
     <div class="skill">
       <h3>PHP / MySQL</h3>
-      <div class="skill-bar">
-        <div class="skill-level" data-width="80"></div>
-      </div>
+      <div class="skill-bar"><div class="skill-level" data-width="80"></div></div>
     </div>
-
     <div class="skill">
       <h3>Python</h3>
-      <div class="skill-bar">
-        <div class="skill-level" data-width="75"></div>
-      </div>
+      <div class="skill-bar"><div class="skill-level" data-width="75"></div></div>
     </div>
-
     <div class="skill">
       <h3>Java / Algorithmique</h3>
-      <div class="skill-bar">
-        <div class="skill-level" data-width="60"></div>
-      </div>
+      <div class="skill-bar"><div class="skill-level" data-width="45"></div></div>
     </div>
-
     <div class="skill">
       <h3>Git</h3>
-      <div class="skill-bar">
-        <div class="skill-level" data-width="25"></div>
-      </div>
+      <div class="skill-bar"><div class="skill-level" data-width="25"></div></div>
     </div>
-
   </section>
-</main>
+
+  <!-- Fiche de compétences -->
+  <section class="fiche-box">
+    <div class="fiche-text">
+      <h2>Fiche de compétences</h2>
+      <p>Consulte ou télécharge ma fiche de compétences complète au format PDF.</p>
+    </div>
+    <div class="fiche-btns">
+      <a class="btn" href="assets/Tableau de synthèse.xls" target="_blank" rel="noopener">👁 Voir le tableau</a>
+      <a class="btn-outline" href="assets/Tableau de synthèse.xls" download>⬇ Télécharger</a>
+    </div>
+  </section>
+</main> 
 
 <footer>
   <p>© <span id="year"></span> — Portfolio Joey</p>
 </footer>
+
+<style>
+.fiche-box {
+  max-width: 800px;
+  margin: 40px auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  background: linear-gradient(135deg, rgba(183,0,255,0.05), rgba(0,234,255,0.05));
+  border: 1px solid rgba(0,234,255,0.13);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+}
+
+.fiche-text h2 {
+  font-family: var(--font-head);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.fiche-text p {
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+.fiche-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+
+@media (max-width: 600px) {
+  .fiche-box { flex-direction: column; align-items: flex-start; }
+}
+</style>
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
@@ -80,20 +111,15 @@ function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("show");
 }
 
-/* Animation des barres au scroll */
 const bars = document.querySelectorAll('.skill-level');
-
-bars.forEach(bar => {
-  const w = bar.dataset.width;
-  bar.style.width = w + '%';
-});
-
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(e => {
-    if (e.isIntersecting) e.target.classList.add('animated');
+    if (e.isIntersecting) {
+      e.target.style.width = e.target.dataset.width + '%';
+      e.target.classList.add('animated');
+    }
   });
 }, { threshold: 0.3 });
-
 bars.forEach(b => observer.observe(b));
 </script>
 </body>
