@@ -27,50 +27,38 @@
 <main class="page">
   <section class="section">
     <h1 class="title">Me Contacter</h1>
-    <p class="subtitle">Une question, un projet ou une opportunité ? Envoyez-moi un message.</p>
+    <p class="subtitle">Une question, un projet ou une opportunité ? N'hésitez pas à me contacter.</p>
   </section>
 
-  <section class="contact-box">
-    <!--
-      netlify-honeypot et data-netlify="true" sont obligatoires pour
-      que Netlify détecte et gère le formulaire automatiquement.
-      Les messages arriveront dans ton dashboard Netlify + par email.
-    -->
-    <form
-      name="contact" netlify
-      method="POST"
-      data-netlify="true"
-      netlify-honeypot="bot-field"
-      class="contact-form"
-      id="contactForm"
-    >
-      <!-- Champ caché anti-spam Netlify -->
-      <input type="hidden" name="form-name" value="contact">
-      <p style="display:none;">
-        <label>Ne pas remplir : <input name="bot-field"></label>
-      </p>
+  <section class="contact-links-box">
 
-      <div>
-        <label for="nom">Nom</label>
-        <input type="text" id="nom" name="nom" required placeholder="Votre nom">
+    <a class="contact-link" href="j117713224@gmail.com">
+      <span class="contact-icon">📧</span>
+      <div class="contact-info">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">j117713224@gmail.com</span>
       </div>
+      <span class="contact-arrow">→</span>
+    </a>
 
-      <div>
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" required placeholder="votre@email.com">
+    <a class="contact-link" href="tel:+594694214542">
+      <span class="contact-icon">📞</span>
+      <div class="contact-info">
+        <span class="contact-label">Téléphone</span>
+        <span class="contact-value">+594 694 214542</span>
       </div>
-
-      <div>
-        <label for="message">Message</label>
-        <textarea id="message" name="message" required placeholder="Votre message…"></textarea>
+      <span class="contact-arrow">→</span>
+    </a>
+<!--
+    <a class="contact-link" href="https://linkedin.com/in/ton-profil" target="_blank" rel="noopener">
+      <span class="contact-icon">💼</span>
+      <div class="contact-info">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">linkedin.com/in/ton-profil</span>
       </div>
-
-      <button type="submit">Envoyer</button>
-    </form>
-
-    <div class="success-msg" id="successMsg">
-      ✅ Message envoyé avec succès ! Je vous répondrai dès que possible.
-    </div>
+      <span class="contact-arrow">→</span>
+    </a>
+-->
   </section>
 </main>
 
@@ -78,36 +66,74 @@
   <p>© <span id="year"></span> — Portfolio Joey</p>
 </footer>
 
-<script>
-document.getElementById("year").textContent = new Date().getFullYear();
-function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("show");
+<style>
+.contact-links-box {
+  max-width: 560px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
 }
 
-/* Gestion envoi formulaire en AJAX pour afficher le message de succès */
-const form = document.getElementById('contactForm');
-form.addEventListener('submit', async function(e) {
-  e.preventDefault();
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 22px 24px;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.contact-link:hover {
+  border-color: rgba(0,234,255,0.3);
+  transform: translateX(6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
 
-  const data = new FormData(form);
+.contact-icon { font-size: 1.6rem; flex-shrink: 0; }
 
-  try {
-    const response = await fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: new URLSearchParams(data).toString()
-    });
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+}
 
-    if (response.ok) {
-      form.style.display = 'none';
-      document.getElementById('successMsg').style.display = 'block';
-    } else {
-      alert('Une erreur est survenue. Réessayez.');
-    }
-  } catch (err) {
-    alert('Erreur réseau. Réessayez.');
+.contact-label {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-family: var(--font-head);
+}
+
+.contact-value {
+  font-size: 0.95rem;
+  color: var(--text);
+  font-weight: 500;
+}
+.contact-link:hover .contact-value { color: var(--accent2); }
+
+.contact-arrow {
+  font-size: 1.1rem;
+  color: var(--border2);
+  transition: color 0.2s, transform 0.2s;
+}
+.contact-link:hover .contact-arrow {
+  color: var(--accent2);
+  transform: translateX(4px);
+}
+</style>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+  function toggleMenu() {
+    document.getElementById("navLinks").classList.toggle("show");
   }
-});
 </script>
 </body>
 </html>
