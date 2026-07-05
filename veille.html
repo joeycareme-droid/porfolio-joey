@@ -25,109 +25,327 @@
 </header>
 
 <main class="page">
-  <div class="veille-header" style="margin-bottom:40px;">
+
+  <!-- En-tête -->
+  <div class="veille-header">
     <h1 class="title">Veille Technologique</h1>
     <p class="subtitle">
-      Sujet : <strong style="color:#e2e4ec;">L'Intelligence Artificielle Générative</strong><br>
-      Sélection d'articles récents sur l'IA générative — ChatGPT, Claude et leurs impacts.
+      Sujet : <strong>L'Intelligence Artificielle Générative</strong><br>
+      Articles mis à jour automatiquement à chaque visite.
     </p>
-    <p style="font-size:.78rem;color:#6b7080;margin-top:8px;">Dernière mise à jour : 23/04/2026</p>
+    <div class="veille-meta-bar">
+      <span id="veille-status-badge" class="status-badge">
+        <span class="live-dot"></span>Live – Dev.to
+      </span>
+      <span id="veille-update-time" class="veille-update"></span>
+    </div>
   </div>
 
-  <section class="veille-grid">
+  <!-- Grille articles -->
+  <section class="veille-grid" id="veille-grid"></section>
 
-    <!-- Article 1 -->
-    <a class="v-card" href="https://www.blogdumoderateur.com/ia-generative-ludovic-salenne-repond-questions-lecteurs-bdm/" target="_blank" rel="noopener" style="animation-delay:0s">
-      <div class="v-img">
-        <img src="https://f.hellowork.com/blogdumoderateur/2026/04/boite-questions-ia-ludovic-salenne.jpg" alt="" loading="lazy" onerror="this.closest('.v-img').style.display='none'">
-      </div>
-      <div class="v-body">
-        <div class="v-meta">
-          <span class="v-source">Blogdumoderateur.com</span>
-          <span class="v-date">23/04/2026</span>
-        </div>
-        <h2 class="v-title">IA générative : Ludovic Salenne répond aux questions des lecteurs de BDM</h2>
-        <p class="v-desc">Ludovic Salenne, expert en intelligence artificielle, a répondu aux questions posées par nos lecteurs.</p>
-        <span class="v-link">Lire l'article →</span>
-      </div>
-    </a>
-
-    <!-- Article 2 -->
-    <a class="v-card" href="https://www.generation-nt.com/actualites/ubisoft-chatgpt-jeux-aaa-2074396" target="_blank" rel="noopener" style="animation-delay:0.07s">
-      <div class="v-img">
-        <img src="https://img.generation-nt.com/ubisoft_04B002A301700608.webp" alt="" loading="lazy" onerror="this.closest('.v-img').style.display='none'">
-      </div>
-      <div class="v-body">
-        <div class="v-meta">
-          <span class="v-source">Génération NT</span>
-          <span class="v-date">22/04/2026</span>
-        </div>
-        <h2 class="v-title">Ubisoft impose désormais la maîtrise des IA pour développer ses futurs jeux AAA</h2>
-        <p class="v-desc">Ubisoft exige désormais une expérience concrète avec des modèles d'IA générative comme ChatGPT ou MidJourney pour des postes de développement clés.</p>
-        <span class="v-link">Lire l'article →</span>
-      </div>
-    </a>
-
-    <!-- Article 3 -->
-    <a class="v-card" href="https://fredcavazza.net/2026/04/15/seule-une-meilleure-pedagogie-peut-faciliter-ladoption-de-lia/" target="_blank" rel="noopener" style="animation-delay:0.14s">
-      <div class="v-img">
-        <img src="https://fredcavazza.net/wp-content/uploads/2026/04/Pedagogie-IA-1.jpg" alt="" loading="lazy" onerror="this.closest('.v-img').style.display='none'">
-      </div>
-      <div class="v-body">
-        <div class="v-meta">
-          <span class="v-source">Fredcavazza.net</span>
-          <span class="v-date">15/04/2026</span>
-        </div>
-        <h2 class="v-title">Seule une meilleure pédagogie peut faciliter l'adoption de l'IA</h2>
-        <p class="v-desc">Plus de 3 ans après la sortie de ChatGPT, 80 % des salariés refusent l'adoption imposée par leur direction. Une question de pédagogie avant tout.</p>
-        <span class="v-link">Lire l'article →</span>
-      </div>
-    </a>
-
-    <!-- Article 4 -->
-    <a class="v-card" href="https://www.lesnumeriques.com/telephone-portable/ios-27-tout-savoir-sur-le-nouveau-siri-booste-a-l-ia-nouveaute-principale-a-venir-sur-l-iphone-n254193.html" target="_blank" rel="noopener" style="animation-delay:0.21s">
-      <div class="v-img">
-        <img src="https://cdn.lesnumeriques.com/optim/news/25/254193/f6e56164-ios-27-tout-savoir-sur-le-nouveau-siri-booste-a-l-ia-nouveaute-principale-a-venir-sur-l-iphone_png__1200_678__0-92-1920-1100.jpg" alt="" loading="lazy" onerror="this.closest('.v-img').style.display='none'">
-      </div>
-      <div class="v-body">
-        <div class="v-meta">
-          <span class="v-source">Les Numériques</span>
-          <span class="v-date">12/04/2026</span>
-        </div>
-        <h2 class="v-title">iOS 27 : tout savoir sur le nouveau Siri boosté à l'IA, nouveauté principale à venir sur l'iPhone</h2>
-        <p class="v-desc">Avec iOS 27, Siri ferait sa révolution grâce à l'arrivée de l'intelligence artificielle. Les fuites d'informations semblent bien savoir ce qu'Apple nous concocterait !</p>
-        <span class="v-link">Lire l'article →</span>
-      </div>
-    </a>
-
-    <!-- Article 5 -->
-    <a class="v-card" href="https://theconversation.com/openai-en-bourse-les-marches-peuvent-ils-gouverner-chatgpt-et-lia-279431" target="_blank" rel="noopener" style="animation-delay:0.28s">
-      <div class="v-img">
-        <img src="https://images.theconversation.com/files/726663/original/file-20260327-57-27rt2h.jpg?ixlib=rb-4.1.0&rect=0%2C111%2C5202%2C2601&q=45&auto=format&w=1356&h=668&fit=crop" alt="" loading="lazy" onerror="this.closest('.v-img').style.display='none'">
-      </div>
-      <div class="v-body">
-        <div class="v-meta">
-          <span class="v-source">The Conversation</span>
-          <span class="v-date">07/04/2026</span>
-        </div>
-        <h2 class="v-title">OpenAI en Bourse : les marchés peuvent-ils gouverner ChatGPT et l'IA ?</h2>
-        <p class="v-desc">L'arrivée en Bourse d'OpenAI pose une question éthique fondamentale : les marchés financiers peuvent-ils vraiment contrôler l'intelligence artificielle ?</p>
-        <span class="v-link">Lire l'article →</span>
-      </div>
-    </a>
-
-  </section>
 </main>
 
 <footer>
   <p>© <span id="year"></span> — Portfolio Joey</p>
 </footer>
 
+<style>
+/* ── En-tête veille ── */
+.veille-header { margin-bottom: 40px; }
+
+.veille-meta-bar {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 12px;
+  flex-wrap: wrap;
+}
+
+/* Badge statut */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  padding: 4px 12px;
+  background: rgba(0,234,255,0.08);
+  border: 1px solid rgba(0,234,255,0.2);
+  border-radius: 100px;
+  color: var(--accent2);
+  font-family: var(--font-head);
+}
+
+.status-badge--info {
+  background: rgba(183,0,255,0.08);
+  border-color: rgba(183,0,255,0.2);
+  color: var(--accent1);
+}
+
+/* Point vert animé */
+.live-dot {
+  width: 7px; height: 7px;
+  background: var(--accent2);
+  border-radius: 50%;
+  animation: livePulse 1.8s ease-in-out infinite;
+  flex-shrink: 0;
+}
+
+@keyframes livePulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.7); }
+}
+
+.veille-update {
+  font-size: 0.78rem;
+  color: var(--muted);
+}
+
+/* ── Skeleton loader ── */
+.skeleton-card {
+  height: 280px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  position: relative;
+  overflow: hidden;
+}
+
+.skeleton-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.04) 50%,
+    transparent 100%);
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(100%); }
+}
+
+/* ── Cartes articles ── */
+.article-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  overflow: hidden;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s, border-color 0.25s, box-shadow 0.25s;
+  animation: vFadeUp 0.5s ease both;
+}
+
+.article-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(0,234,255,0.3);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.4);
+}
+
+/* Image */
+.article-card__img {
+  width: 100%;
+  height: 170px;
+  overflow: hidden;
+  background: var(--bg2);
+  flex-shrink: 0;
+}
+
+.article-card__img img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s;
+}
+.article-card:hover .article-card__img img { transform: scale(1.06); }
+
+.article-card__img-placeholder {
+  width: 100%; height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--muted);
+}
+
+/* Corps */
+.article-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 18px;
+  flex: 1;
+}
+
+/* Tags */
+.article-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.article-tag {
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 2px 9px;
+  background: rgba(0,234,255,0.07);
+  border: 1px solid rgba(0,234,255,0.18);
+  border-radius: 100px;
+  color: var(--accent2);
+}
+
+/* Titre */
+.article-title {
+  font-family: var(--font-head);
+  font-size: 0.93rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* Description */
+.article-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+  line-height: 1.6;
+  flex: 1;
+}
+
+/* Meta bas de carte */
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.78rem;
+  color: var(--muted);
+  margin-top: auto;
+  padding-top: 6px;
+}
+
+.article-link-hint {
+  color: var(--accent2);
+  font-weight: 600;
+  transition: letter-spacing 0.2s;
+}
+.article-card:hover .article-link-hint { letter-spacing: 0.03em; }
+</style>
+
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 function toggleMenu() {
   document.getElementById("navLinks").classList.toggle("show");
 }
+
+/* ══════════════════════════════════════
+   VEILLE IA — Dev.to API
+   ══════════════════════════════════════ */
+
+let veilleArticles = [];
+
+const FALLBACK_ARTICLES = [
+  { id:1, title:'ChatGPT : comment l\'IA générative transforme nos usages quotidiens', description:"Depuis son lancement, ChatGPT a révolutionné la façon dont nous interagissons avec la technologie. Tour d'horizon des usages les plus courants.", url:'https://openai.com/chatgpt', tag_list:['AI','ChatGPT'], user:{name:'OpenAI'} },
+  { id:2, title:'Claude vs ChatGPT : comparaison des deux IA les plus populaires', description:"Anthropic et OpenAI s'affrontent pour dominer le marché de l'IA générative. Quelles sont les différences entre Claude et ChatGPT en 2025 ?", url:'https://www.anthropic.com/claude', tag_list:['AI','Claude'], user:{name:'Anthropic'} },
+  { id:3, title:'Gemini de Google : l\'IA qui veut tout changer', description:"Google a lancé Gemini pour concurrencer ChatGPT. Découvrez ses capacités multimodales et son intégration dans l'écosystème Google.", url:'https://gemini.google.com', tag_list:['AI','Gemini'], user:{name:'Google'} },
+  { id:4, title:'L\'IA générative dans le développement logiciel : GitHub Copilot', description:"GitHub Copilot révolutionne la façon dont les développeurs écrivent du code. Productivité, limites et bonnes pratiques.", url:'https://github.com/features/copilot', tag_list:['AI','Dev'], user:{name:'GitHub'} },
+  { id:5, title:'Les risques éthiques de l\'IA générative', description:"Les grands modèles de langage soulèvent des questions éthiques importantes : biais, désinformation, propriété intellectuelle. Que faire ?", url:'https://www.anthropic.com/safety', tag_list:['AI','Éthique'], user:{name:'Anthropic'} },
+  { id:6, title:'Midjourney et l\'IA générative d\'images : état de l\'art', description:"La génération d\'images par IA a fait des progrès fulgurants. Midjourney, DALL-E, Stable Diffusion : où en est-on en 2025 ?", url:'https://www.midjourney.com', tag_list:['AI','Images'], user:{name:'Midjourney'} },
+];
+
+async function fetchArticles() {
+  const grid       = document.getElementById('veille-grid');
+  const badge      = document.getElementById('veille-status-badge');
+  const updateTime = document.getElementById('veille-update-time');
+  if (!grid) return;
+
+  // Skeletons au chargement
+  if (veilleArticles.length === 0) {
+    grid.innerHTML = Array.from({length: 6}).map(() =>
+      '<div class="skeleton-card"></div>'
+    ).join('');
+  }
+
+  let articles, usingFallback = false;
+
+  try {
+    // Tags liés à l'IA sur Dev.to
+    const tags = ['ai', 'machinelearning', 'deeplearning', 'chatgpt', 'llm', 'artificialintelligence'];
+    const tag  = tags[Math.floor(Math.random() * tags.length)];
+    const res  = await fetch(`https://dev.to/api/articles?tag=${tag}&per_page=6&state=rising`);
+    if (!res.ok) throw new Error();
+    const data = await res.json();
+    if (!data || data.length === 0) throw new Error();
+    articles = data.sort(() => Math.random() - 0.5);
+  } catch {
+    articles      = FALLBACK_ARTICLES;
+    usingFallback = true;
+  }
+
+  veilleArticles = articles;
+
+  // Badge statut
+  if (badge) {
+    badge.className = usingFallback
+      ? 'status-badge status-badge--info'
+      : 'status-badge';
+    badge.innerHTML = usingFallback
+      ? 'Articles sélectionnés'
+      : '<span class="live-dot"></span>Live – Dev.to';
+  }
+
+  // Heure de mise à jour
+  if (updateTime) {
+    updateTime.textContent = 'Mis à jour à ' +
+      new Date().toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' });
+  }
+
+  // Rendu des cartes
+  grid.innerHTML = '';
+  articles.forEach((a, i) => {
+    const card = document.createElement('a');
+    card.className = 'article-card';
+    card.href      = a.url;
+    card.target    = '_blank';
+    card.rel       = 'noreferrer';
+    card.style.animationDelay = (i * 0.08) + 's';
+
+    const tags    = (a.tag_list || []).slice(0, 2).map(t =>
+      `<span class="article-tag">${t}</span>`
+    ).join('');
+    const desc    = (a.description || '').slice(0, 110) + '…';
+    const imgHtml = a.cover_image
+      ? `<img src="${a.cover_image}" alt="${a.title}" loading="lazy"
+             onerror="this.parentElement.innerHTML='<div class=\'article-card__img-placeholder\'></div>'">`
+      : `<div class="article-card__img-placeholder"></div>`;
+
+    card.innerHTML = `
+      <div class="article-card__img">${imgHtml}</div>
+      <div class="article-card__body">
+        <div class="article-card__tags">${tags}</div>
+        <h3 class="article-title">${a.title}</h3>
+        <p class="article-desc">${desc}</p>
+        <div class="article-meta">
+          <span>${a.user?.name || 'Dev.to'}</span>
+          <span class="article-link-hint">Lire →</span>
+        </div>
+      </div>`;
+
+    grid.appendChild(card);
+  });
+}
+
+fetchArticles();
 </script>
 </body>
 </html>

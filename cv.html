@@ -42,8 +42,8 @@
       </div>
     </div>
     <div class="cv-hero-btns">
-      <a class="btn" href="mon_cv.pdf" target="_blank">👁 Voir le CV</a>
-      <a class="btn-outline" href="mon_cv.pdf" download>⬇ Télécharger</a>
+      <a class="btn" href="assets/cv/mon_cv.pdf" target="_blank">👁 Voir le CV</a>
+      <a class="btn-outline" href="assets/cv/mon_cv.pdf" download>⬇ Télécharger</a>
     </div>
   </section>
 
@@ -55,7 +55,7 @@
       <div class="tl-item">
         <div class="tl-dot"></div>
         <div class="tl-content">
-          <span class="tl-date">En cours — 2024/2026</span>
+          <span class="tl-date">Obtenu — 2024/2026</span>
           <h3>BTS SIO option SLAM</h3>
           <p>Formation en développement logiciel et applications web. Projets en PHP, Python, Java et SQL.</p>
         </div>
@@ -63,22 +63,28 @@
 
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-content">
-          <span class="tl-date">Janvier – février 2026</span>
+        <a class="tl-content tl-clickable" href="assets/stage_apynow.pptx" target="_blank" rel="noopener">
+          <div class="tl-content-top">
+            <span class="tl-date">Janvier – Février 2026</span>
+            <span class="tl-ppt-badge">📊 Voir la présentation</span>
+          </div>
           <h3>Stage — Apynow Consulting</h3>
           <p>Utilisation de Hostinger, création d'un site vitrine.</p>
           <span class="tl-tag">5 semaines</span>
-        </div>
+        </a>
       </div>
 
       <div class="tl-item">
         <div class="tl-dot"></div>
-        <div class="tl-content">
-          <span class="tl-date">Juin – Juillet 2025</span>
+        <a class="tl-content tl-clickable" href="assets/stage_edf.pptx" target="_blank" rel="noopener">
+          <div class="tl-content-top">
+            <span class="tl-date">Juin – Juillet 2025</span>
+            <span class="tl-ppt-badge">📊 Voir la présentation</span>
+          </div>
           <h3>Stage — EDF SEI</h3>
           <p>Utilisation de GLPI, découverte des infrastructures IT, préparation d'un outil d'automatisation interne.</p>
           <span class="tl-tag">5 semaines</span>
-        </div>
+        </a>
       </div>
 
       <div class="tl-item">
@@ -114,12 +120,16 @@
       <p>Télécharge la version PDF pour tous les détails.</p>
     </div>
     <div class="cv-hero-btns">
-      <a class="btn" href="mon_cv.pdf" target="_blank">👁 Voir le CV</a>
-      <a class="btn-outline" href="mon_cv.pdf" download>⬇ Télécharger</a>
+      <a class="btn" href="assets/cv/mon_cv.pdf" target="_blank">👁 Voir le CV</a>
+      <a class="btn-outline" href="assets/cv/mon_cv.pdf" download>⬇ Télécharger</a>
     </div>
   </section>
 
 </div>
+
+<footer>
+  <p>© <span id="year"></span> — Portfolio Joey</p>
+</footer>
 
 <style>
 .cv-page { max-width: 900px; margin: 0 auto; padding: 52px 48px 80px; }
@@ -127,109 +137,131 @@
 .cv-hero {
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 24px;
-  background: #111318; border: 1px solid #1c1e26;
-  border-radius: 20px; padding: 32px 36px; margin-bottom: 48px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 32px 36px; margin-bottom: 48px;
   position: relative; overflow: hidden;
 }
 .cv-hero::before {
   content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
-  background: linear-gradient(90deg, #b700ff, #00eaff);
+  background: var(--grad);
 }
 .cv-hero-left { display: flex; align-items: center; gap: 20px; }
 .cv-avatar {
   width: 64px; height: 64px; border-radius: 50%;
-  background: linear-gradient(135deg, #b700ff, #00eaff);
+  background: var(--grad);
   display: flex; align-items: center; justify-content: center;
-  font-family: 'Syne', sans-serif;
-  font-size: 1.6rem; font-weight: 800; color: #0a0a0f; flex-shrink: 0;
+  font-family: var(--font-head); font-size: 1.6rem; font-weight: 800;
+  color: var(--bg); flex-shrink: 0;
 }
-.cv-name { font-family: 'Syne', sans-serif; font-size: 1.6rem; font-weight: 800; color: #e2e4ec; margin-bottom: 4px; }
-.cv-role { font-size: 0.9rem; color: #6b7080; margin-bottom: 10px; }
+.cv-name { font-family: var(--font-head); font-size: 1.6rem; font-weight: 800; color: var(--text); margin-bottom: 4px; }
+.cv-role { font-size: 0.9rem; color: var(--muted); margin-bottom: 10px; }
 .cv-tags { display: flex; flex-wrap: wrap; gap: 8px; }
 .cv-tags span {
   font-size: 0.75rem; padding: 3px 10px;
   background: rgba(0,234,255,0.06); border: 1px solid rgba(0,234,255,0.14);
-  border-radius: 100px; color: #6b7080;
+  border-radius: 100px; color: var(--muted);
 }
 .cv-hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
 
 .cv-section { margin-bottom: 48px; }
 .cv-section-title {
-  font-family: 'Syne', sans-serif;
+  font-family: var(--font-head);
   font-size: 0.78rem; font-weight: 700; text-transform: uppercase;
-  letter-spacing: 0.1em; color: #3a3f50;
+  letter-spacing: 0.1em; color: var(--muted);
   margin-bottom: 24px; padding-bottom: 10px;
-  border-bottom: 1px solid #1c1e26;
+  border-bottom: 1px solid var(--border);
 }
 
 .timeline { display: flex; flex-direction: column; position: relative; padding-left: 28px; }
 .timeline::before {
   content: ''; position: absolute; left: 6px; top: 10px; bottom: 10px; width: 1px;
-  background: linear-gradient(to bottom, #b700ff, #00eaff, transparent);
+  background: linear-gradient(to bottom, var(--accent1), var(--accent2), transparent);
 }
 .tl-item { position: relative; padding-bottom: 32px; }
 .tl-item:last-child { padding-bottom: 0; }
 .tl-dot {
   position: absolute; left: -25px; top: 6px;
   width: 12px; height: 12px; border-radius: 50%;
-  background: linear-gradient(135deg, #b700ff, #00eaff);
+  background: var(--grad);
   box-shadow: 0 0 10px rgba(183,0,255,0.4);
 }
+
 .tl-content {
-  background: #111318; border: 1px solid #1c1e26;
-  border-radius: 14px; padding: 20px 24px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 20px 24px;
   transition: border-color 0.2s, transform 0.2s;
 }
 .tl-content:hover { border-color: rgba(0,234,255,0.2); transform: translateX(4px); }
-.tl-date {
-  font-size: 0.75rem; font-weight: 600; color: #00eaff;
-  text-transform: uppercase; letter-spacing: 0.06em;
-  display: block; margin-bottom: 6px;
+
+a.tl-clickable {
+  display: block; text-decoration: none; color: inherit; cursor: pointer;
 }
-.tl-content h3 { font-family: 'Syne', sans-serif; font-size: 1rem; font-weight: 700; color: #e2e4ec; margin-bottom: 6px; }
-.tl-content p { font-size: 0.875rem; color: #6b7080; line-height: 1.6; }
+a.tl-clickable:hover {
+  border-color: rgba(183,0,255,0.35) !important;
+  transform: translateX(6px);
+  box-shadow: 0 6px 24px rgba(183,0,255,0.1);
+}
+
+.tl-content-top {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 8px; margin-bottom: 6px;
+}
+
+.tl-ppt-badge {
+  font-size: 0.7rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.06em; padding: 3px 10px;
+  background: rgba(183,0,255,0.08); border: 1px solid rgba(183,0,255,0.22);
+  border-radius: 100px; color: var(--accent1);
+  font-family: var(--font-head);
+  transition: background 0.2s;
+}
+a.tl-clickable:hover .tl-ppt-badge { background: rgba(183,0,255,0.18); }
+
+.tl-date {
+  font-size: 0.75rem; font-weight: 600; color: var(--accent2);
+  text-transform: uppercase; letter-spacing: 0.06em; display: block;
+}
+.tl-content h3 { font-family: var(--font-head); font-size: 1rem; font-weight: 700; color: var(--text); margin-bottom: 6px; }
+.tl-content p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
 .tl-tag {
   display: inline-block; margin-top: 10px; padding: 3px 10px;
   background: rgba(183,0,255,0.09); border: 1px solid rgba(183,0,255,0.2);
-  border-radius: 100px; font-size: 0.75rem; color: #b700ff;
+  border-radius: 100px; font-size: 0.75rem; color: var(--accent1);
 }
 
 .cv-skills-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
 .cv-skill-chip {
   display: flex; align-items: center; gap: 14px;
-  background: #111318; border: 1px solid #1c1e26;
-  border-radius: 14px; padding: 16px 18px;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: var(--radius); padding: 16px 18px;
   transition: border-color 0.2s, transform 0.2s;
 }
 .cv-skill-chip:hover { border-color: rgba(183,0,255,0.25); transform: translateY(-3px); }
 .chip-icon { font-size: 1.5rem; flex-shrink: 0; }
-.cv-skill-chip strong { display: block; font-size: 0.88rem; color: #ddd; margin-bottom: 2px; }
-.cv-skill-chip p { font-size: 0.78rem; color: #555; margin: 0; }
+.cv-skill-chip strong { display: block; font-size: 0.88rem; color: var(--text); margin-bottom: 2px; font-family: var(--font-head); }
+.cv-skill-chip p { font-size: 0.78rem; color: var(--muted); margin: 0; }
 
 .cv-download-box {
   display: flex; align-items: center; justify-content: space-between;
   flex-wrap: wrap; gap: 20px;
   background: linear-gradient(135deg, rgba(183,0,255,0.05), rgba(0,234,255,0.05));
-  border: 1px solid rgba(0,234,255,0.13); border-radius: 20px; padding: 28px 32px;
+  border: 1px solid rgba(0,234,255,0.13); border-radius: var(--radius); padding: 28px 32px;
 }
-.cv-download-text h3 { font-family: 'Syne', sans-serif; font-size: 1.1rem; color: #e2e4ec; margin-bottom: 4px; }
-.cv-download-text p { font-size: 0.85rem; color: #6b7080; }
+.cv-download-text h3 { font-family: var(--font-head); font-size: 1.1rem; color: var(--text); margin-bottom: 4px; }
+.cv-download-text p { font-size: 0.85rem; color: var(--muted); }
 
 @media (max-width: 768px) {
   .cv-page { padding: 40px 20px 60px; }
   .cv-hero { flex-direction: column; align-items: flex-start; }
   .cv-skills-grid { grid-template-columns: repeat(2, 1fr); }
   .cv-download-box { flex-direction: column; align-items: flex-start; }
+  .tl-content-top { flex-direction: column; align-items: flex-start; }
 }
 @media (max-width: 480px) {
   .cv-skills-grid { grid-template-columns: 1fr; }
   .cv-hero-left { flex-direction: column; align-items: flex-start; }
 }
 </style>
-
-<footer>
-  <p>© <span id="year"></span> — Portfolio Joey</p>
-</footer>
 
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
